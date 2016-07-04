@@ -30,9 +30,9 @@
 ;;; Code:
 
 (defconst sswanv-packages
-  '(youdao-dictionary)
-  )
-
+  '(youdao-dictionary
+    company
+    lua-mode))
 
 (defun sswanv/init-youdao-dictionary ()
   (use-package youdao-dictionary
@@ -42,5 +42,11 @@
   )
 
 
+(defun sswanv/post-init-company ()
+  (setq company-minimum-prefix-length 1))
+
+
+(defun sswanv/post-init-lua-mode ()
+  (setq lua-indent-level 4))
 
 ;;; packages.el ends here
