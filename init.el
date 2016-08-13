@@ -37,8 +37,8 @@ values."
      emacs-lisp
      lua
      (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode)
-	 javascript
-	 html
+     javascript
+     html
 
      (colors :variables colors-enable-nyan-cat-progress-bar t)
 	 (spacemacs-layouts :variables layouts-enable-autosave nil
