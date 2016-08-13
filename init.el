@@ -27,17 +27,23 @@ values."
      helm
      auto-completion
      (better-defaults :variables better-defaults-move-to-end-of-code-first t)
-     emacs-lisp
      git
      markdown
      org
      osx
      spell-checking
      syntax-checking
-     sswanv
+
+     emacs-lisp
      lua
-     c-c++
+     (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode)
+	 javascript
+	 html
+
      (colors :variables colors-enable-nyan-cat-progress-bar t)
+	 (spacemacs-layouts :variables layouts-enable-autosave nil
+						layouts-autosave-delay 300)
+     sswanv
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
