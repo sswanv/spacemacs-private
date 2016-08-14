@@ -41,8 +41,8 @@ values."
      html
 
      (colors :variables colors-enable-nyan-cat-progress-bar t)
-	 (spacemacs-layouts :variables layouts-enable-autosave nil
-						layouts-autosave-delay 300)
+     (spacemacs-layouts :variables layouts-enable-autosave nil
+     			layouts-autosave-delay 300)
      sswanv
      )
    ;; List of additional packages that will be installed without being
