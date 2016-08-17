@@ -31,7 +31,7 @@ values."
      markdown
      org
      osx
-     spell-checking
+     ;; spell-checking
      syntax-checking
 
      emacs-lisp

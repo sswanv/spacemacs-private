@@ -24,3 +24,23 @@
     :defer t
     :mode ("\\.proto\\'" . protobuf-mode)))
 
+(defun sswanv/post-init-projectile ()
+  (progn
+    (with-eval-after-load 'projectile
+      (progn
+        (setq projectile-completion-system 'ivy)
+        (add-to-list 'projectile-other-file-alist '("html" "js"))
+        (add-to-list 'projectile-other-file-alist '("js" "html"))))
+
+    (defvar my-simple-todo-regex "\\<\\(FIXME\\|TODO\\|BUG\\):")
+
+    (defun my-simple-todo ()
+      "When in a project, create a `multi-occur' buffer matching the
+  regex in `my-simple-todo-regex' across all buffers in the
+  current project. Otherwise do `occur' in the current file."
+      (interactive)
+      (if (projectile-project-p)
+          (multi-occur (projectile-project-buffers) my-simple-todo-regex)
+        (occur my-simple-todo-regex)))
+    (spacemacs/set-leader-keys "pf" 'sswanv/open-file-with-projectile-or-counsel-git)
+    (spacemacs/set-leader-keys "pt" 'my-simple-todo)))
