@@ -2,6 +2,7 @@
   '(youdao-dictionary
     company
     lua-mode
+	projectile
     protobuf-mode))
 
 (defun sswanv/init-youdao-dictionary ()
