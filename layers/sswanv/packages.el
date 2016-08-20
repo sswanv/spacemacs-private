@@ -44,4 +44,5 @@
           (multi-occur (projectile-project-buffers) my-simple-todo-regex)
         (occur my-simple-todo-regex)))
     (spacemacs/set-leader-keys "pf" 'sswanv/open-file-with-projectile-or-counsel-git)
-    (spacemacs/set-leader-keys "pt" 'my-simple-todo)))
+    ;; (spacemacs/set-leader-keys "pt" 'my-simple-todo)
+	))
