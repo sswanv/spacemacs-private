@@ -117,7 +117,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 14
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -275,7 +275,6 @@ you should place your code here."
   (define-key evil-insert-state-map [escape] 'evil-normal-state)
   (setq ns-use-srgb-colorspace nil)
   (setq powerline-default-separator 'arrow)
-  (setq-default indent-tabs-mode t)
   (setq-default default-tab-width 4)
   )
 
