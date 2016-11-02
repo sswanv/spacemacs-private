@@ -250,14 +250,14 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  (setq configuration-layer--elpa-archives
-  		'(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
-  		  ("org-cn"   . "http://elpa.zilongshanren.com/org/")
-  		  ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
   ;; (setq configuration-layer--elpa-archives
-  ;; 		'(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-  ;; 		  ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-  ;; 		  ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+  ;; 		'(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
+  ;; 		  ("org-cn"   . "http://elpa.zilongshanren.com/org/")
+  ;; 		  ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
+  (setq configuration-layer--elpa-archives
+  		'(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+  		  ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+  		  ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
 
   (setq tramp-ssh-controlmaster-options
@@ -271,8 +271,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setcdr evil-insert-state-map nil)
-  (define-key evil-insert-state-map [escape] 'evil-normal-state)
   (setq ns-use-srgb-colorspace nil)
   (setq powerline-default-separator 'arrow)
   (setq-default default-tab-width 4)
@@ -282,3 +280,4 @@ you should place your code here."
 ;; auto-generate custom variable definitions.
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)
+

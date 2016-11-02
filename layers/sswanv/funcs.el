@@ -1,3 +1,4 @@
+
 (defun sswanv/vcs-project-root ()
   "Return the project root for current buffer."
   (let ((directory default-directory))
@@ -12,3 +13,12 @@
     (if (projectile-project-p)
         (projectile-find-file)
       (counsel-file-jump))))
+
+(defun sswanv/load-my-layout ()
+  (interactive)
+  (persp-load-state-from-file (concat persp-save-dir "sswanv")))
+
+(defun sswanv/save-my-layout ()
+  (interactive)
+  (persp-save-state-to-file (concat persp-save-dir "sswanv")))
+

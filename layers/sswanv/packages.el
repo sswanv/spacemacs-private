@@ -3,7 +3,10 @@
     company
     lua-mode
     projectile
-    protobuf-mode))
+    protobuf-mode
+    find-file-in-project
+    evil
+    ))
 
 (defun sswanv/init-youdao-dictionary ()
   (use-package youdao-dictionary
@@ -46,3 +49,12 @@
     (spacemacs/set-leader-keys "pf" 'sswanv/open-file-with-projectile-or-counsel-git)
     ;; (spacemacs/set-leader-keys "pt" 'my-simple-todo)
 	))
+
+(defun sswanv/init-find-file-in-project ()
+  (use-package find-file-in-project
+    :defer t))
+
+(defun sswanv/post-init-evil ()
+  (progn
+    (setcdr evil-insert-state-map nil)
+    (define-key evil-insert-state-map [escape] 'evil-normal-state)))
