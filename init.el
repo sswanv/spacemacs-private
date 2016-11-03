@@ -259,7 +259,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   		  ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
   		  ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
-
   (setq tramp-ssh-controlmaster-options
         "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
   )
@@ -274,6 +273,12 @@ you should place your code here."
   (setq ns-use-srgb-colorspace nil)
   (setq powerline-default-separator 'arrow)
   (setq-default default-tab-width 4)
+
+  (when (spacemacs/system-is-mswindows)
+    (progn
+      (set-fontset-font "fontset-default"
+                        'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
+      ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
