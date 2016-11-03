@@ -6,6 +6,7 @@
     protobuf-mode
     find-file-in-project
     evil
+    spaceline
     ))
 
 (defun sswanv/init-youdao-dictionary ()
@@ -58,3 +59,8 @@
   (progn
     (setcdr evil-insert-state-map nil)
     (define-key evil-insert-state-map [escape] 'evil-normal-state)))
+
+(defun sswanv/post-init-spaceline ()
+  (progn
+    (setq-default powerline-default-separator 'arrow)))
+

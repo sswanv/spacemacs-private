@@ -1,6 +1,5 @@
 
 (setq ns-use-srgb-colorspace nil)
-(setq powerline-default-separator 'arrow)
 (setq-default default-tab-width 4)
 
 (when (spacemacs/system-is-mswindows)
