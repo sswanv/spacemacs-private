@@ -270,15 +270,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq ns-use-srgb-colorspace nil)
-  (setq powerline-default-separator 'arrow)
-  (setq-default default-tab-width 4)
-
-  (when (spacemacs/system-is-mswindows)
-    (progn
-      (set-fontset-font "fontset-default"
-                        'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
-      ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
