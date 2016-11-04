@@ -1,4 +1,6 @@
 
+(spacemacs|defvar-company-backends lua-mode)
+
 (setq ns-use-srgb-colorspace nil)
 (setq-default default-tab-width 4)
 

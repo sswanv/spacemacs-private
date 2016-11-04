@@ -18,13 +18,30 @@
     (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+))
   )
 
-
 (defun sswanv/post-init-company ()
-  (setq company-minimum-prefix-length 1))
+  (progn
+    (setq company-minimum-prefix-length 1
+          company-idle-delay 0.08)
 
+    (when (configuration-layer/package-usedp 'company)
+      (spacemacs|add-company-hook lua-mode)
+      )
+    ))
 
 (defun sswanv/post-init-lua-mode ()
-  (setq lua-indent-level 4))
+  (add-hook 'lua-mode-hook 'evil-matchit-mode)
+  (setq lua-indent-level 4)
+
+  (with-eval-after-load 'lua-mode
+  (require 'company-keywords)
+  (push '(lua-mode  "setmetatable" "local" "function" "and" "break" "do" "else" "elseif" "self" "resume" "yield"
+                    "end" "false" "for" "function" "goto" "if" "nil" "not" "or" "repeat" "return" "then" "true"
+                    "until" "while" "__index" "dofile" "getmetatable" "ipairs" "pairs" "print" "rawget" "status"
+                    "rawset" "select" "_G" "assert" "collectgarbage" "error" "pcall" "coroutine"
+                    "rawequal" "require" "load" "tostring" "tonumber" "xpcall" "gmatch" "gsub"
+                    "rep" "reverse" "sub" "upper" "concat" "pack" "insert" "remove" "unpack" "sort"
+                    "lower") company-keywords-alist))
+  )
 
 (defun sswanv/init-protobuf-mode ()
   (use-package protobuf-mode
