@@ -8,6 +8,7 @@
     evil
     spaceline
     etags-select
+    cc-mode
     ))
 
 (defun sswanv/init-youdao-dictionary ()
@@ -80,4 +81,12 @@
       (evilified-state-evilify etags-select-mode etags-select-mode-map)
       (spacemacs/set-leader-keys-for-major-mode 'js2-mode
         "gd" 'etags-select-find-tag-at-point))))
+
+(defun sswanv/post-init-cc-mode ()
+    (progn
+      (setq c-default-style "linux")
+      (setq c-basic-offset 4)
+      (c-set-offset 'substatement-open 0)
+      ))
+
 
