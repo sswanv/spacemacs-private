@@ -261,6 +261,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (setq tramp-ssh-controlmaster-options
         "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+
+  (setq byte-compile-warnings '(not obsolete))
   )
 
 (defun dotspacemacs/user-config ()
@@ -271,6 +273,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/toggle-centered-point-globally-on)
+  (global-hungry-delete-mode t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
