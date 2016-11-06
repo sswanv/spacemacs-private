@@ -9,3 +9,6 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 (global-set-key (kbd "s-d") 'sswanv/my-mc-mark-next-line-this)
+
+(define-key evil-visual-state-map (kbd "C-r") 'sswanv/evil-quick-replace)
+

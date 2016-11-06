@@ -77,7 +77,8 @@
 (defun sswanv/post-init-evil ()
   (progn
     (setcdr evil-insert-state-map nil)
-    (define-key evil-insert-state-map [escape] 'evil-normal-state)))
+    (define-key evil-insert-state-map [escape] 'evil-normal-state)
+    ))
 
 (defun sswanv/post-init-spaceline ()
   (progn

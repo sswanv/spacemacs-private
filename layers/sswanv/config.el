@@ -10,3 +10,4 @@
                       'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
     ))
 
+(global-prettify-symbols-mode 1)
