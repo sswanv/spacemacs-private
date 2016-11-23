@@ -9,6 +9,7 @@
     spaceline
     etags-select
     cc-mode
+    avy
     ))
 
 (defun sswanv/init-youdao-dictionary ()
@@ -107,4 +108,7 @@
       (c-set-offset 'substatement-open 0)
       ))
 
+(defun sswanv/post-init-avy ()
+  (progn
+    (define-key evil-normal-state-map (kbd "SPC SPC") 'avy-goto-char-timer)))
 
