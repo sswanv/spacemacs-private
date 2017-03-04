@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -41,8 +42,9 @@ values."
      html
 
      (colors :variables colors-enable-nyan-cat-progress-bar t)
-     (spacemacs-layouts :variables layouts-enable-autosave nil
-     			layouts-autosave-delay 300)
+     (spacemacs-layouts :variables
+                        layouts-enable-autosave nil
+                        layouts-autosave-delay 300)
      sswanv
      )
    ;; List of additional packages that will be installed without being
